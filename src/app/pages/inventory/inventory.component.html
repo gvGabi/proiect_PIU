@@ -1,0 +1,14 @@
+<div class="background-image">
+
+    <div class="items">
+     <div *ngFor="let item of itemList" class="item">
+        <p>Nume: {{item.name}}</p>
+        <p>Descriere: {{item.category}}</p>
+        <p>Cantitate: {{item.number}}</p>
+        <button>delete</button>
+        <button>edit</button>
+        
+     </div>
+    </div>
+    <button mat-raised-button color="accent" (click)="openDialog()">ADD</button>
+</div>

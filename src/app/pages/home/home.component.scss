@@ -1,0 +1,141 @@
+.background-image {
+    background-size: contain;
+    position: relative;
+    height: 120vh;
+    overflow-y: auto;
+    background-image: url("../../../assets/susan.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .background-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, #644937);
+  }
+  
+  .content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .text-container {
+    width: 40%;
+    font-size: 25px;
+    font-weight: 500;
+    color: #ffffff;
+    align-items: center;
+    text-shadow: 2px 2px #000000,
+                4px 4px #3e3e3e;
+  }
+
+  .title{
+    font-size:50px;
+	letter-spacing:0.1em;
+    font-weight: 700;
+    border: 5px #000000;
+    text-shadow: 5px 5px #000000,
+                6px 6px #3e3e3e;
+                  
+  }
+  
+  .image-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin-left: 100px;
+    margin-top: 100px;
+    
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: display 10s infinite;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 2);
+  }
+  
+  .image-container img:nth-child(2) {
+    animation-delay: 2s;
+  }
+  
+  .image-container img:nth-child(3) {
+    animation-delay: 4s;
+  }
+  
+  .image-container img:nth-child(4) {
+    animation-delay: 6s;
+  }
+  
+  .image-container img:nth-child(5) {
+    animation-delay: 8s;
+  }
+  
+  @keyframes display {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+  }
+
+
+
+
+
+
+  button {
+    padding: 17px 40px;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+   }
+   
+   button:hover {
+    letter-spacing: 3px;
+    background-color: hsl(47, 94%, 59%);
+    color: hsl(0, 0%, 0%);
+    box-shadow: rgb(220, 158, 24) 0px 7px 29px 0px;
+   }
+   
+   button:active {
+    letter-spacing: 3px;
+    background-color: hsl(47, 94%, 59%);
+    color: hsl(0, 0%, 0%);
+    box-shadow: rgb(220, 158, 24) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+   }
